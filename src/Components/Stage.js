@@ -1,7 +1,9 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import { ChordLine, LyricLine } from './StageUtils'
+import { ChordLine, LyricLine, Space } from './StageUtils'
 import Styles from '../styles'
+
+import request from 'superagent'
 
 export default class Stage extends React.Component {
   constructor(props) {
@@ -14,25 +16,18 @@ export default class Stage extends React.Component {
 
   componentDidMount() {
     const url = 'http://' + this.state.host + ':' + this.state.port + '/api/controller/live_chords'
-    console.log(url)
-    $.ajax({
-      url: url,
-      type: 'GET',
-      crossDomain: true,
-      dataType: 'json',
-      headers: {
-        'Access-Control-Allow-Origin': '*'
-      },
-      success: function(data) {
-        console.log(data)
-      }
-    });
+    request
+      .get(url)
+      .set('Access-Control-Allow-Origin', '*')
+      .end(function(resp){
+        console.log(resp)
+      })
   }
 
   render() {
     return (
       <div style={Styles.Stage}>
-        <ChordLine>D</ChordLine>
+        <ChordLine>D<Space amount={10}/>E</ChordLine>
         <LyricLine>Where can I go?</LyricLine>
       </div>
     )

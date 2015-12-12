@@ -20,3 +20,18 @@ export class LyricLine extends React.Component {
     )
   }
 }
+
+export class Space extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      amount: props.amount
+    }
+  }
+
+  render() {
+    return (
+      <span>&nbsp;</span>
+    )
+  }
+}

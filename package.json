@@ -56,6 +56,7 @@
     "react": "^0.14.3",
     "react-bootstrap": "^0.28.1",
     "react-dom": "^0.14.3",
-    "react-sidebar": "^2.0.0"
+    "react-sidebar": "^2.0.0",
+    "superagent": "^1.5.0"
   }
 }
