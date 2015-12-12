@@ -1,0 +1,16 @@
+/**
+  index.css
+  silas styles
+*/
+
+body {
+  background: rgb(14, 17, 29);
+  position: relative;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+}
