@@ -1,18 +1,10 @@
 import React from 'react'
-
-const styles = {
-  ChordLine: {
-    color: 'yellow'
-  },
-  LyricLine: {
-    color: 'blue'
-  }
-}
+import Styles from '../styles'
 
 export class ChordLine extends React.Component {
   render() {
     return (
-      <span style={styles.ChordLine}>
+      <span style={Styles.ChordLine}>
         {this.props.children}
       </span>
     )
@@ -22,7 +14,7 @@ export class ChordLine extends React.Component {
 export class LyricLine extends React.Component {
   render() {
     return (
-      <span style={styles.LyricLine}>
+      <span style={Styles.LyricLine}>
         {this.props.children}>
       </span>
     )

@@ -8,5 +8,11 @@ export default styles = {
     maxWidth: '768px',
     margin: '0 auto',
     padding: '10px'
+  },
+  ChordLine: {
+    color: 'yellow'
+  },
+  LyricLine: {
+    color: 'white'
   }
 }

@@ -4,17 +4,17 @@ import { ChordLine } from './StageUtils'
 import Styles from '../styles'
 
 export default class Stage extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      host: props.host,
-      port: props.port
-    }
-  }
+  // constructor(props) {
+  //   // super(props)
+  //   // this.state = {
+  //   //   host: props.host,
+  //   //   port: props.port
+  //   // }
+  // }
 
   render() {
     return (
-      <div>
+      <div style={Styles.Stage}>
         <ChordLine>D</ChordLine>
       </div>
     )

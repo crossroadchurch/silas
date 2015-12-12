@@ -4,10 +4,6 @@ import { createStore } from 'redux'
 import Stage from './Components/Stage'
 
 export class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {}
-  }
 
   render() {
     return (
