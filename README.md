@@ -1,63 +1,28 @@
-# React Transform Boilerplate
+# Silas
+*Silas improves lyrics and signalling.*
 
-[![react-transform channel on Discord](https://img.shields.io/badge/discord-react--transform%40reactiflux-61DAFB.svg?style=flat-square)](http://www.reactiflux.com)
+Silas is a companion app built to run along side [Paul](https://github.com/crossroadchurch/paul). In its current state, Silas is barely functional and is __not__ suitable for production.
 
-:rocket: **Now  with [Babel 6](https://github.com/babel/babel) support** (thanks [@justingreenberg](https://github.com/justingreenberg))
+### Installation
+Once reasonably stable, Silas will be published to npm.
 
-This project is a reference implementation of **[babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform)** can be used as a boilerplate for quickly getting a new project up and running with a few useful transforms:
+For the time being, clone the github repository and install.
+```bash
+git clone https://github.com/crossroadchurch/silas
+cd silas
+npm install
+```
 
-* [**react-transform-hmr**](https://github.com/gaearon/react-transform-hmr) - enables hot reloading react components
-* [**react-transform-catch-errors**](https://github.com/gaearon/react-transform-catch-errors) - catches errors inside `render()`
-
-Syntax errors are displayed in an overlay using **[@glenjamin](https://github.com/glenjamin)**’s **[webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware)**, which replaces Webpack Dev Server. This project **[does not](https://medium.com/@dan_abramov/the-death-of-react-hot-loader-765fa791d7c4)** use React Hot Loader.
-
-## Demo
-
-![react-transform-boilerplate](https://cloud.githubusercontent.com/assets/1539088/11611771/ae1a6bd8-9bac-11e5-9206-42447e0fe064.gif)
-
-## Installation
+### Development
+To run the development server, use `devServer.js`. The package.json already has a script to do this.
 
 ```bash
-git clone https://github.com/gaearon/react-transform-boilerplate.git
-cd react-transform-boilerplate
-npm install
 npm start
-open http://localhost:3000
 ```
 
-Transforms are enabled for files inside `src` (except `index.js`).
+### Production
+To run in production (or just so that you can connect from other devices locally)...
 
-## Troubleshooting
-
-#### I can’t serve images, use different HTML, etc.
-
-This project is a reference implementation of **[babel-plugin-react-transform](https://github.com/gaearon/babel-plugin-react-transform)**—it is just a Webpack bundle served by an Express server. It’s not meant to demonstrate every feature of either project. Please consult Webpack and Express docs to learn how to serve images, or bundle them into your JavaScript application.
-
-#### My server is throwing a 404 after `npm run build`
-
-Again, this boilerplate is **not** intended to be production ready. The 404 is because `index.html` is hard coded with the webpack bundle path in `/static/` (used by development server). You must manually update the script tag in `index.html` with the correct bundle path of `/dist/bundle.js` in order to use compiled source.
-
-#### I don’t see the syntax error overlay
-
-Make sure your react-app is not attached to `document.body`. The client overlay provided by [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware) will render into `document.body`. 
-
-Attaching the React root node to `document.body` requires extra caution, as many third-party packages will append their markup to the body as well. React will replace the entire contents in the body on every re-render. Thus you will not see the additional markup.
-
-It’s always better to render your React app in a `#root` DOM element.
-
-```js
-import React from 'react'
-import { render } from 'react-dom'
-import { App } from 'app'
-     
-render(<App />, document.getElementById('root'))
+```bash
+npm run production
 ```
-
-## Discussion
-
-You can discuss React Transform and related projects in **#react-transform** channel on [Reactiflux Discord](http://reactiflux.com).
-
-## License
-
-CC0 (public domain)
-domain)

@@ -15,7 +15,7 @@ export class LyricLine extends React.Component {
   render() {
     return (
       <span style={Styles.LyricLine}>
-        {this.props.children}>
+        {this.props.children}
       </span>
     )
   }
