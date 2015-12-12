@@ -1,6 +1,6 @@
 {
   "name": "silas",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Silas integrates lyrics and songs.",
   "scripts": {
     "clean": "rimraf dist",
