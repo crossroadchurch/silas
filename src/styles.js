@@ -22,6 +22,14 @@ const styles = {
   LyricLine: {
     color: 'white',
     display: 'block'
+  },
+  SongOrder: {
+    display: 'block',
+    listStyleType: 'none',
+  },
+  SongOrderChild: {
+    display: 'inline',
+    border: '1px solid yellow'
   }
 }
 

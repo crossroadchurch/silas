@@ -20,3 +20,22 @@ export class LyricLine extends React.Component {
     )
   }
 }
+
+
+export class SongOrder extends React.Component {
+  render() {
+    return (
+      <ul style={Styles.SongOrder}>
+        {this.props.children}
+      </ul>
+    )
+  }
+}
+
+export class SongOrderChild extends React.Component {
+  render() {
+    return (
+      <li style={Styles.SongOrderChild}>{this.props.children}</li>
+    )
+  }
+}
