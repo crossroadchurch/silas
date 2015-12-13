@@ -15,16 +15,13 @@ export default class Stage extends React.Component {
   }
 
   componentDidMount() {
-    const url = 'http://' + this.state.host + ':' + this.state.port + '/api/controller/live_chords'
+    const url = 'http://192.168.1.100:4316/api/controller/live_chords'
     request
       .get(url)
-      .set('Accept', 'application/json')
-      .end(function(err, res){
-        if (res.ok) {
-          alert('yay got ' + JSON.stringify(res.body));
-        } else {
-          alert('Oh no! error ' + res.text);
-        }
+      .type('json')
+      .set('Access-Control-Allow-Origin', '*')
+      .end(function(err, res) {
+        console.log(res.text)
       })
   }
 
