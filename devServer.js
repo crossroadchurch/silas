@@ -18,6 +18,10 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/welcome', function(req, res){
+  res.sendFile(path.join(__dirname, 'landing.html'));
+})
+
 app.listen(3000, 'localhost', function(err) {
   if (err) {
     console.log(err);

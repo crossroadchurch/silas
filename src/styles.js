@@ -8,14 +8,14 @@ const styles = {
     maxWidth: '768px',
     margin: '0 auto',
     padding: '0.95em',
-    paddingTop: '1em',
+    paddingTop: '2em',
     fontSize: '3em',
   },
   ChordLine: {
-    color: 'yellow',
+    color: 'rgb(217, 34, 210)',
     display: 'inline-block',
     position: 'relative',
-    top: '-1em',
+    top: '-1.1em',
     width: '0px',
     marginTop: '0.5em'
   },
@@ -29,7 +29,7 @@ const styles = {
   },
   SongOrderChild: {
     display: 'inline',
-    border: '1px solid yellow'
+    border: '1px solid rgb(217, 34, 210)'
   }
 }
 
