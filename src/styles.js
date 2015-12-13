@@ -13,7 +13,11 @@ const styles = {
   },
   ChordLine: {
     color: 'yellow',
-    display: 'block'
+    display: 'inline-block',
+    position: 'relative',
+    top: '-1em',
+    width: '0px',
+    marginTop: '0.5em'
   },
   LyricLine: {
     color: 'white',
