@@ -11,18 +11,34 @@ export default class Stage extends React.Component {
     this.state = {
       host: props.host,
       port: props.port,
+      live_chords: {},
+      current_slide: {},
     }
   }
 
+  handleChordsRequest(err, res) {
+    if (err) {
+      console.log(err)
+    }
+
+    this.live_chords = res.body
+    console.log(res.body)
+    console.log(live_chords)
+
+    let current_slide = {}
+    this.live_chords.results.slides.map((slide) => {
+      if (slide.selected) {
+        current_slide = slide
+      }
+    })
+    this.current_slide = current_slide
+  }
+
   componentDidMount() {
-    const url = 'http://192.168.1.100:4316/api/controller/live_chords'
+    const url = 'http://localhost:4316/api/controller/live_chords'
     request
       .get(url)
-      .type('json')
-      .set('Access-Control-Allow-Origin', '*')
-      .end(function(err, res) {
-        console.log(res.text)
-      })
+      .end((err, res) => this.handleChordsRequest(err, res))
   }
 
   render() {
