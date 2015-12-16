@@ -4,13 +4,14 @@
 */
 
 const styles = {
-  Stage: {
+  StateFlag: {
     maxWidth: '768px',
     margin: '0 auto',
     padding: '0.95em',
     paddingTop: '2em',
     fontSize: '3em',
   },
+  Scene: { },
   ChordLine: {
     color: 'rgb(217, 34, 210)',
     display: 'inline-block',

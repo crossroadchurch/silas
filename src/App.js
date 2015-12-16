@@ -15,7 +15,7 @@ export class App extends Component {
   render() {
     const usingChords = this.state.chords
     return (
-      <Stage host={'localhost'} port={4316} chords={usingChords} />
+      <Stage />
     )
   }
 }
