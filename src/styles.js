@@ -32,8 +32,9 @@ const styles = {
     display: 'block'
   },
   NextLine: {
+    display: 'block',
     color: '#999',
-    margin: '1em 0em',
+    marginTop: '2em',
     fontSize: '0.8em',
   },
   Highlight: {
@@ -45,7 +46,7 @@ const styles = {
   SongOrder: {
     listStyleType: 'none',
     padding: '0',
-    marginBottom: '1em',
+    marginBottom: '2em',
   },
   SongOrderChild: {
     display: 'inline',
