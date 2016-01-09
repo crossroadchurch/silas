@@ -24,3 +24,12 @@ footer {
   top: 15px;
   right: 15px;
 }
+
+.chord-line {
+  color: #d922d2;
+  display: inline-block;
+  position: relative;
+  top: -1.1em;
+  width: 0px;
+  margin-top: 0.5em;
+}

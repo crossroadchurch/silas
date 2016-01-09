@@ -4,16 +4,23 @@
 */
 
 const styles = {
-  StateFlag: {
-    maxWidth: '768px',
+  Loading: {
+    display: 'block',
+    fill: '#d922d2',
+    margin: '0 auto'
+  },
+  Scene: {
+    maxWidth: '1000px',
+    height: '100vh',
     margin: '0 auto',
     padding: '0.95em',
     paddingTop: '2em',
-    fontSize: '3em',
+    fontSize: '2.5em',
+    display: 'flex',
+    justifyContent: 'center'
   },
-  Scene: { },
   ChordLine: {
-    color: 'rgb(217, 34, 210)',
+    color: '#d922d2',
     display: 'inline-block',
     position: 'relative',
     top: '-1.1em',
@@ -24,13 +31,26 @@ const styles = {
     color: 'white',
     display: 'block'
   },
+  NextLine: {
+    color: '#999',
+    margin: '1em 0em',
+    fontSize: '0.8em',
+  },
+  Highlight: {
+    color: '#d922d2'
+  },
+  Error: {
+    color: 'red'
+  },
   SongOrder: {
-    display: 'block',
     listStyleType: 'none',
+    padding: '0',
+    marginBottom: '1em',
   },
   SongOrderChild: {
     display: 'inline',
-    border: '1px solid rgb(217, 34, 210)'
+    color: 'white',
+    margin: '0px 5px'
   }
 }
 
