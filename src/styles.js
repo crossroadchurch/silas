@@ -13,9 +13,9 @@ const styles = {
     maxWidth: '1000px',
     height: '100vh',
     margin: '0 auto',
-    padding: '0.95em',
-    paddingTop: '2em',
-    fontSize: '2.5em',
+    padding: '0.95rem',
+    paddingTop: '2rem',
+    fontSize: '2.5rem',
     display: 'flex',
     justifyContent: 'center'
   },
@@ -23,9 +23,9 @@ const styles = {
     color: '#d922d2',
     display: 'inline-block',
     position: 'relative',
-    top: '-1.1em',
+    top: '-1.1rem',
     width: '0px',
-    marginTop: '0.5em'
+    marginTop: '0.5rem'
   },
   LyricLine: {
     color: 'white',
@@ -34,8 +34,8 @@ const styles = {
   NextLine: {
     display: 'block',
     color: '#999',
-    marginTop: '2em',
-    fontSize: '0.8em',
+    marginTop: '2rem',
+    fontSize: '0.8rem',
   },
   Highlight: {
     color: '#d922d2'
@@ -46,7 +46,7 @@ const styles = {
   SongOrder: {
     listStyleType: 'none',
     padding: '0',
-    marginBottom: '2em',
+    marginBottom: '2rem',
   },
   SongOrderChild: {
     display: 'inline',
