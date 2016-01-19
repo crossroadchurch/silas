@@ -22,17 +22,21 @@ class Stage extends React.Component {
 
   parseLiveChords(updateFetch) {
     let slide_data = updateFetch.current_slide
-    let chords = slide_data.match(/<chord[\w\+#"='' ]* \/>/g)
-
+    let chords = slide_data.match(/<chord[\w\+\/#"='' ]* \/>/g)
+    
     if (chords) {
       chords.map((chord) => {
-        const id = chord.match(/'\w+'/)[0].slice(1, -1)
-        slide_data = slide_data.replace(chord, '<span class="chord-line">' + id + '</span>')
+        let id = chord.match(/'[\w\+#\/]'/)
+		if (id) {
+		  id = id[0].slice(1, -1)
+		  slide_data = slide_data.replace(chord, '<span class="chord-line">' + id + '</span>')
+		}
       })
     }
     const lines = slide_data.split('<br>')
 
     let next_line = updateFetch.next_slide
+    next_line = next_line.replace(/<chord[\w\+#"='' ]* \/>/g, '')
     next_line = next_line.split('<br>')
 
     let song_order = updateFetch.song_order.split(' ')

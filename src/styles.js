@@ -29,13 +29,14 @@ const styles = {
   },
   LyricLine: {
     color: 'white',
-    display: 'block'
+    display: 'block',
+    margin: '2rem 0rem'
   },
   NextLine: {
     display: 'block',
     color: '#999',
     marginTop: '2rem',
-    fontSize: '0.8rem',
+    fontSize: '2rem',
   },
   Highlight: {
     color: '#d922d2'
@@ -47,6 +48,7 @@ const styles = {
     listStyleType: 'none',
     padding: '0',
     marginBottom: '2rem',
+    fontSize: '1rem'
   },
   SongOrderChild: {
     display: 'inline',

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { createStore } from 'redux'
 
 import pkg from '../package'
 import Stage from './Components/Stage'
@@ -7,7 +6,7 @@ import Stage from './Components/Stage'
 export class App extends Component {
   render() {
     return (
-      <Stage host={'192.168.1.108'} port={4316} />
+      <Stage host={'10.0.0.2'} port={4316} />
     )
   }
 }
