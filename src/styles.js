@@ -32,6 +32,11 @@ const styles = {
     display: 'block',
     margin: '2rem 0rem'
   },
+  NextLyricLine: {
+    color: '#999',
+    display: 'block',
+    margin: '2rem 0rem'
+  },
   NextLine: {
     display: 'block',
     color: '#999',

@@ -19,6 +19,15 @@ export class LyricLine extends React.Component {
   }
 }
 
+export class NextLyricLine extends React.Component {
+  render() {
+    return (
+      <span style={Styles.NextLyricLine} dangerouslySetInnerHTML={{__html: this.props.children}}/>
+    )
+  }
+}
+
+
 export class NextLine extends React.Component {
   render() {
     return (

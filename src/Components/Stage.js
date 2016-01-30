@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-refetch'
 
 import Styles from '../styles'
-import { Chord, LyricLine, NextLine, SongOrder, SongOrderChild, Highlight } from './StageUtils'
+import { Chord, LyricLine, NextLyricLine, NextLine, SongOrder, SongOrderChild, Highlight } from './StageUtils'
 import LoadingAnimation from 'react-loading'
 
 function isChord(string) {
@@ -26,7 +26,7 @@ class Stage extends React.Component {
     
     if (chords) {
       chords.map((chord) => {
-        let id = chord.match(/'[\w\+#\/]'/)
+        let id = chord.match(/'[\w\+#\/]*'/)
 		if (id) {
 		  id = id[0].slice(1, -1)
 		  slide_data = slide_data.replace(chord, '<span class="chord-line">' + id + '</span>')
@@ -35,9 +35,26 @@ class Stage extends React.Component {
     }
     const lines = slide_data.split('<br>')
 
-    let next_line = updateFetch.next_slide
-    next_line = next_line.replace(/<chord[\w\+#"='' ]* \/>/g, '')
-    next_line = next_line.split('<br>')
+    let next_slide_data = updateFetch.next_slide
+    let next_chords = next_slide_data.match(/<chord[\w\+\/#"='' ]* \/>/g)
+    
+    if (next_chords) {
+      next_chords.map((next_chord) => {
+        let id = next_chord.match(/'[\w\+#\/]*'/)
+		if (id) {
+		  id = id[0].slice(1, -1)
+		  next_slide_data = next_slide_data.replace(next_chord, '<span class="next-chord-line">' + id + '</span>')
+		}
+      })
+    }
+    let next_lines = next_slide_data.split('<br>')
+	if (next_lines.length > 2) {
+		next_lines = next_lines.slice(0, 2)
+	}
+	
+	// let next_line = updateFetch.next_slide
+    // next_line = next_line.replace(/<chord[\w\+#"='' ]* \/>/g, '')
+    // next_line = next_line.split('<br>')
 
     let song_order = updateFetch.song_order.split(' ')
 
@@ -61,7 +78,15 @@ class Stage extends React.Component {
           )
         })}
 
-        <NextLine>{next_line[0]}</NextLine>
+		{next_lines.map((next_line) => {
+          return (
+            <NextLyricLine>
+              {next_line}
+            </NextLyricLine>
+          )
+        })}
+		
+        
       </div>
     )
   }
